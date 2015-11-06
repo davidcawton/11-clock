@@ -5,6 +5,8 @@ var stylePaths = [
   'sass',
   'bower_components/normalize-css',
   'bower_components/font-awesome/scss',
+  'bower_components/neat/app/assets/stylesheets',
+  'bower_components/bourbon/app/assets/stylesheets',
 ];
 
 var styles = new Sass(stylePaths, 'app.scss', 'app.css');

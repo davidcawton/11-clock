@@ -1,7 +1,44 @@
 /* apply a natural box layout model to all elements, but allowing components to change */
+
+@import "normalize";
+
+$fa-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts";
+
+@import "font-awesome";
+
 html {
   box-sizing: border-box;
 }
 *, *:before, *:after {
   box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  background: red;
+}
+
+
+.clock {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.time,  {
+  display: flex;
+}
+
+.color__bar {
+  position: absolute;
+  right: 28%;
+  top: 50%;
+}
+
+.time, .color__bar {
+  color: white;
+  font-size: 5rem;
+  font-family: 'Averia Sans Libre', cursive;
 }
