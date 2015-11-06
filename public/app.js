@@ -1,5 +1,6 @@
 (function() {
   var time = document.querySelector('.time');
+  var colorSpan = document.querySelector('.color');
   var backgroundColor = document.querySelector('body');
   var bar = document.querySelector('.color__bar');
 
@@ -14,16 +15,16 @@
     var secColor = toColorRange(nowSec, 60);
     var minColor = toColorRange(nowMin, 60);
     var hourColor = toColorRange(nowHour, 60);
-    console.log(secColor);
-    console.log(minColor);
-    console.log(hourColor);
 
-    backgroundColor.style.background = `rgb(${secColor}, ${minColor}, ${hourColor})`;
+    var colorVal = `rgb(${secColor}, ${minColor}, ${hourColor})`;
+
+    backgroundColor.style.background = colorVal;
+    colorSpan.innerHTML = colorVal;
     bar.style.width = (nowSec * 5  + 'px');
   }, 1000);
 
   var toColorRange = (number, base) => {
-    return number / base * 255;
+    return Math.floor(number / base * 255);
   };
 
   function padZeros(time) {

@@ -39,8 +39,22 @@ body {
   height: 10px;
 }
 
-.time, .color__bar {
+.time, .color__bar, .color {
   color: white;
   font-size: 5rem;
   font-family: 'Averia Sans Libre', cursive;
+}
+
+.color {
+  display: none;
+}
+
+.something:hover {
+  .color {
+    display: block;
+  }
+
+  .time {
+    display: none;
+  }
 }
