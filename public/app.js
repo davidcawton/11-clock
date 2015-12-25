@@ -5,10 +5,10 @@
   var bar = document.querySelector('.color__bar');
 
   window.setInterval(() => {
-    var d = new Date();
-    var nowHour = padZeros(d.getHours());
-    var nowMin = padZeros(d.getMinutes());
-    var nowSec = padZeros(d.getSeconds());
+    var date = new Date();
+    var nowHour = padZeros(date.getHours());
+    var nowMin = padZeros(date.getMinutes());
+    var nowSec = padZeros(date.getSeconds());
     var now = `${nowHour}:${nowMin}:${nowSec}`;
     time.innerHTML = now;
 
